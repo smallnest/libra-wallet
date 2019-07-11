@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{template "head"}}
+    <style>
+        .hero {
+            background: #eee;
+            padding: 20px 80px;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    {{template "navbar"}}
+    <div class="container">
+        <div class="hero">
+            <h2>Current Balance</h2>
+            <h3>{{formatLibraNum .Balance}} <b>libra</b></h3>
+            <p>
+                Received: {{.RecievedEventsCount}}<br>
+                Sent: {{.SentEventsCount}}<br>
+                Sequence: {{.SequenceNumber}}
+            </p>
+            <p><b>Account</b> {{.AuthenticationKey}}</p>
+            <a class="button" href="/">Query</a>
+        </div>
+    </div>
+
+    {{template "footer"}}
+</body>
+
+</html>

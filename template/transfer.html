@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{template "head"}}
+</head>
+
+<body>
+    {{template "navbar"}}
+    <div class="container">
+        <div class="row">
+            <div class="column column-20"></div>
+            <div class="column column-60">
+                <form method="POST" action="/transfer" enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <label for="transferTo">转账给</label>
+                        <input type="text"
+                            placeholder="7b66c2bbc403792b6820a2cb26df56b52e5e310fc161ce6ec8060061093b694c"
+                            name="transferTo" id="transferTo">
+                        <label for="numberOfCoins">Amount (microlibra)</label>
+                        <input type="text" placeholder="1000000" name="numberOfCoins" id="numberOfCoins">
+                        <label for="numberOfCoins">Gas unit price (microlibra)</label>
+                        <input type="text" placeholder="" name="gas_unit_price" id="gas_unit_price" value="0">
+                        <label for="numberOfCoins">Max gas</label>
+                        <input type="text" placeholder="" name="max_gas_amount" id="max_gas_amount" value="10000">
+                        <input class="button-primary" type="submit" value="Transfer">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="column column-20"></div>
+        </div>
+    </div>
+
+    {{template "footer"}}
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{template "head"}}
+</head>
+
+<body>
+    {{template "navbar"}}
+    <div class="container">
+        <div class="row">
+            <div class="column column-20"></div>
+            <div class="column column-60">
+                <form method="POST" action="/mint" enctype="application/x-www-form-urlencoded">
+                    <fieldset>
+                        <label for="transferTo">To</label>
+                        <input type="text" placeholder="" name="transferTo" id="transferTo"
+                            value="9a25ef3e96884708a1197f098981172a791857af2d1260fc2be5bce68e642cc1">
+                        <label for="numberOfCoins">Amount(libra)</label>
+                        <input type="text" placeholder="" name="numberOfCoins" id="numberOfCoins" value="1000">
+                        <input class="button-primary" type="submit" value="mint">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="column column-20"></div>
+        </div>
+    </div>
+
+
+    {{template "footer"}}
+</body>
+
+</html>
