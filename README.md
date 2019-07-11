@@ -9,4 +9,4 @@ a simple libra wallet example.
 
 It uses [codemaveric/libra-go](github.com/codemaveric/libra-go) as the libra client library.
 
-**Notice**: It is a a simle example only for single user and implemented for technical verification.
+**Notice**: It is a a simple example and implemented for technical verification.

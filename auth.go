@@ -49,10 +49,14 @@ func authWithConfig(conf CookieAuthConfig) echo.MiddlewareFunc {
 				return next(c)
 			}
 
-			if !hasLogin {
+			cookie, err := c.Cookie("walletm")
+			if err != nil || cookie.Value == "" {
 				c.Redirect(http.StatusSeeOther, "/login")
 				return nil
 			}
+
+			c.Set("walletm", cookie.Value)
+
 			return next(c)
 		}
 	}
