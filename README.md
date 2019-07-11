@@ -2,7 +2,7 @@
 
 a simple libra wallet example.
 
-[demo](http://10.41.14.195:9000/)
+[demo](http://libra.rpcx.site)
 
 ![](assets/images/snapshoot.png)
 
